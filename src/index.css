@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Cinema range input styling */
+  input[type="range"].cinema-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  input[type="range"].cinema-slider::-webkit-slider-runnable-track {
+    background: rgba(255, 255, 255, 0.12);
+    height: 6px;
+    border-radius: 9999px;
+  }
+
+  input[type="range"].cinema-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -6px;
+    background: #f59e0b;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 2px solid #0f172a;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+    transition: transform 0.1s ease, background-color 0.1s ease;
+  }
+
+  input[type="range"].cinema-slider::-webkit-slider-thumb:active {
+    transform: scale(1.2);
+    background: #fbbf24;
+  }
+
+  /* Zebra pattern for exposure highlight clipping */
+  .zebra-stripes {
+    background: repeating-linear-gradient(
+      -45deg,
+      rgba(255, 0, 85, 0.45),
+      rgba(255, 0, 85, 0.45) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+  }
+
+  /* Grid overlay for framing guide */
+  .rule-of-thirds {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 33.333% 33.333%;
+  }
+
+  /* Safe area padding for notch on mobile */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 16px);
+  }
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #272a38;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3e445b;
+}

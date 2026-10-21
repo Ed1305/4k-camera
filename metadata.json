@@ -1,0 +1,6 @@
+{
+  "name": "PiCam 4K Cinema Studio & Hardware Bridge",
+  "description": "Professional 4K HD camera monitor and real-time DSP studio for Raspberry Pi with cable tethering, EIS image stabilization, super-resolution zoom, and iOS/Android support.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
